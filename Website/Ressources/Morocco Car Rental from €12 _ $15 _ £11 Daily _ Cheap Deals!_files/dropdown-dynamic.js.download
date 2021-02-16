@@ -1,0 +1,116 @@
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+$(document).ready(function($) {
+		$( ".more_options_click" ).click(function() {
+			if($( this ).parent().hasClass( "more_options_title_inactive" ))
+			{
+				$(".more_options_title_active").removeClass("more_options_title_active").addClass("more_options_title_inactive");
+				$(".more_options_list").hide('slow');
+				$(this).parent().addClass("more_options_title_active").removeClass("more_options_title_inactive");
+				$(this).parent().children(".more_options_list").show('slow');
+				
+			}else{
+				$(".more_options_title_active").removeClass("more_options_title_active").addClass("more_options_title_inactive");
+				$(".more_options_list").hide('slow');
+			}
+		});
+		$( ".more_option_company" ).click(function() {		
+			$(this).children(".more_option_company_detail").toggle( "slow");
+			
+		});
+		
+	});
+		
+	/*$('a').on('click', function(e) { //need to change on everywhere
+		var el = $(this);
+		var link = el.attr('href');
+		window.location = link;
+	});*/
+	
+	/*
+     * Replace all SVG images with inline SVG
+     */
+        jQuery('img.svg').each(function(){
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+            }, 'xml');
+
+        });
+		
+		// Sign up newsletter function
+		$( "#subscribe_footer" ).click(function() {		
+			 jQuery.ajax({ type: "POST", url: "/includes/newsletter.php", 
+			 data: { lang: $('#lan').val(),email: $('#email_footer').val()},
+			 success: function(theResponse) { 
+			 	var result = eval("("+theResponse+")");
+				if(result.success==0){
+					$('#subscribeFail_footer').show();
+					$('#subscribeSuccess_footer').hide();
+				}
+				else{
+					$('#subscribeSuccess_footer').show();
+					$('#subscribeFail_footer').hide();
+				}				
+			 	//console.log(result.success); 	
+			 } });
+			
+		});
+		$('.currency_flag').click(function(evt) {
+            $(".menu-item2").toggle();
+			$(".menu-item").hide();
+        });
+		$('.nav-toggle').click(function(evt) {
+            $(".menu-item").toggle();
+			$(".menu-item2").hide();
+        });
+
+
+
+
+
+/* footer function */
+function popitup(url) {
+		newwindow=window.open(url,'name','height=500,width=1050,scrollbars=1,resizable=1,status=1');
+		if (window.focus) {newwindow.focus()}
+		return false;
+}
