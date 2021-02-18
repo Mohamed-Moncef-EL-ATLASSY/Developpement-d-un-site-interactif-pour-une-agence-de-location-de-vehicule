@@ -16,6 +16,7 @@
 
 body {
     position: relative;
+    z-index: -2;
 }
 
 header {
@@ -24,6 +25,7 @@ header {
     top: 0;
 }
 
+
 .nav--bar {
     background: var(--color-secondary);
     width: 1920px;
@@ -31,7 +33,6 @@ header {
 }
 
 .logo--slogan {
-    background-image: url(/Logos/Carealty\ +\ Slogan.png);
     width: 471px;
     height: 180px;
     background-size: cover;
@@ -141,13 +142,12 @@ hr {
 .shop--showcase {
     background-color: white;
     width: 1200px;
-    height: 800px;
+    height: 630px;
     border: 3px solid var(--color-secondary);
     position: relative;
     margin: 0 auto;
     margin-top: 50px;
     z-index: -1;
-
 
 }
 
@@ -159,10 +159,9 @@ h1 {
 .show--showcase {
     border: 4px solid var(--color-primary);
     width: 200px;
-    height: 500px;
+    height: 450px;
     margin: 20px;
-
-
+    position: relative;
 }
 
 .shop--showcase div img {
@@ -179,14 +178,225 @@ h1 {
     font-size: 30px;
 }
 
-
-
 h4 {
     text-align: center;
     font-size: 17px;
+    margin-bottom: 20px;
 }
 
-.list--moto{
+.list--desc {
+    list-style-type: none;
+    text-align: center;
+}
+
+.five--stars {
+    margin-left: 40px;
+    max-width: 60%;
+    height: auto;
+
+}
+
+.ordering {
+    background-color: var(--color-secondary);
+    width: 180px;
+    height: 50px;
+    margin: 5px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.ordering p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 2px;
+    margin-left: 4px;
+}
+
+.ordering h2 {
+    text-align: end;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+@keyframes zwa9 {
+    from{transform:scale(1.2)}
+    to{transform:scale(1)}
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.gallery--showcase {
+    max-width: 1200px;
+    max-height: 900px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-left: 450px;
+    margin-top: 50px;
+    animation: zwa9 0.8s;
+}
+
+.gallery--showcase img:hover {
+    transform: scale(0.9);
+}
+
+.gallery--showcase img {
+    width:40%;
+    height: 40%;
+    padding: 10px;
+    transition: transform 0.2s;
+
+}
+
+.our--top--sales {
+    margin-top: 200px;
+    color: var(--color-secondary);
+    text-align: center;
+    font-size: 45px;
+}
+
+.contact--container{
+    background-image: linear-gradient(to top,var(--color-secondary),var(--color-primary));
+    width: 75%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    z-index: -1;
+}
+
+.contact--header {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+    
+}
+
+.form--to--fill {
+    text-align: center;  
+}
+
+
+
+input {
+    padding: 20px 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 3px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+}
+
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+textarea {
+    padding: 20px 10px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    width: 300px;
+    resize: none;
+    height: 150px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 3px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #ffffff00;
+    border-radius: 8px;
+    border: 2px solid white;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.GPS {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.where--to--find h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+
+}
+
+@media (max-width: 800px) {
+    .nav--bar {
+        width: 800px;
+        height: 60px;
+    }
+
+    .logo--slogan {
+        width: 800px;
+        height: 90px;
+        border: 5px solid var(--color-secondary);
+        border-radius: 30px;
+        margin-left: 25px;
+
+    }
+
+    .list--nav--contents{
+        font-size: 12px;
+        margin: 0px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
