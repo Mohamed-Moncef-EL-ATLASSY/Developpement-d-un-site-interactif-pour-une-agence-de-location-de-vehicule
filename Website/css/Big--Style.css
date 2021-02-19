@@ -28,7 +28,7 @@ header {
 
 .nav--bar {
     background: var(--color-secondary);
-    width: 1920px;
+    width: 1919px;
     height: 100px;
 }
 
@@ -204,7 +204,7 @@ h4 {
     margin-top: 50px;
     position: absolute;
     bottom: 0;
-    
+
 }
 
 .ordering p {
@@ -222,10 +222,21 @@ h4 {
 }
 
 @keyframes zwa9 {
-    from{transform:scale(1.2)}
-    to{transform:scale(1)}
-    from{opacity: 0;}
-    to{opacity: 1;}
+    from {
+        transform: scale(1.2)
+    }
+
+    to {
+        transform: scale(1)
+    }
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .gallery--showcase {
@@ -243,11 +254,10 @@ h4 {
 }
 
 .gallery--showcase img {
-    width:40%;
+    width: 40%;
     height: 40%;
     padding: 10px;
-    transition: transform 0.2s;
-
+    transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 20);
 }
 
 .our--top--sales {
@@ -257,11 +267,11 @@ h4 {
     font-size: 45px;
 }
 
-.contact--container{
-    background-image: linear-gradient(to top,var(--color-secondary),var(--color-primary));
+.contact--container {
+    background-image: linear-gradient(to top, var(--color-secondary), var(--color-primary));
     width: 75%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
     margin: 0 auto;
     margin-top: 200px;
     z-index: -1;
@@ -272,11 +282,11 @@ h4 {
     padding-top: 50px;
     font-size: 40px;
     color: white;
-    
+
 }
 
 .form--to--fill {
-    text-align: center;  
+    text-align: center;
 }
 
 
@@ -295,7 +305,7 @@ input {
     color: white;
 }
 
-input::placeholder{
+input::placeholder {
     color: white;
 }
 
@@ -305,7 +315,7 @@ label {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    
+
 }
 
 textarea {
@@ -363,12 +373,154 @@ button {
 
     }
 
-    .list--nav--contents{
+    .list--nav--contents {
         font-size: 12px;
-        margin: 0px;
-
+        margin-left: -250px;
 
     }
+
+    .intro {
+        width: 600px;
+        height: 400px;
+        background-size: cover;
+    }
+
+    .reserve--box {
+        width: 200px;
+        height: 100px;
+
+    }
+
+    .reserve--box--header {
+        font-size: 20px;
+    }
+
+    .reserve--box--rate--min {
+        font-size: 15px;
+        padding-top: 0px;
+    }
+
+    .reserve--box--rate--max {
+        font-size: 15px;
+        padding-top: 5px;
+    }
+
+    hr {
+        margin-left: 50px;
+        width: 100px;
+        border-top: 3px;
+        margin-top: 10px;
+    }
+
+    .shop--showcase {
+        flex-wrap: wrap;
+        width: 600px;
+        height: auto;
+
+    }
+
+    .show--showcase:nth-child(4) {
+        display: none;
+
+    }
+
+    .showcase {
+        flex-wrap: wrap;
+        margin-left: 50px;
+    }
+
+    .ordering {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .our--top--sales {
+        font-size: 30px;
+    }
+
+    .gallery--showcase {
+        margin-left: 120px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+#popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .7);
+}
+
+#popup-content {
+    color: black;
+    background: var(--color-secondary);
+
+    width: 600px;
+    border-radius: 8px;
+
+}
+
+#close {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 36px;
+    background: rgba(0, 0, 0, .1);
+    cursor: pointer;
+    user-select: none;
+}
+
+#popup-content p {
+    padding: 24px;
+    margin-top: 10px;
+}
+
+#popup-content p span {
+    color: black;
+    font-weight: 900;
+}
 
 
 
