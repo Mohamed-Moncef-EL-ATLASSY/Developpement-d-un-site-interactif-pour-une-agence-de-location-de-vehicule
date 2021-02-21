@@ -9,47 +9,101 @@
     <title>Carealty- Car Rental</title>
 </head>
 
+
+<header>
+    <div class="nav--bar">
+
+        <img class="logo--slogan" src="/Logos/Carealty + Slogan.png">
+
+        <div class="nav--contents">
+            <ul class="list--nav--contents">
+
+                <div class="home">
+                    <li>
+                        <a href="index.html" class="home" title="home"> Home</a>
+                    </li>
+
+                </div>
+
+                <div class="gallery">
+                    <li>
+                        <a href="gallery.html" class="gallery" title="gallery"> Gallery </a>
+                    </li>
+                </div>
+
+                <div class="reservation">
+                    <li>
+                        <a href="reservation.html" class="reservation" title="reservation"> Reservation </a>
+                    </li>
+                </div>
+
+                <div class="contact">
+                    <li>
+                        <a href="contact.html" class="contact" title="contact"> Contact </a>
+                    </li>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+</header>
+
 <body>
-    <header>
-        <div class="nav--bar">
+    <div class="contact--container">
+        <div class="contact--form">
+            <h2 class="contact--header">Reserve your vehicle</h2>
+            <div class="form--to--fill">
 
-            <img class="logo--slogan" src="/Logos/Carealty + Slogan.png">
 
-            <div class="nav--contents">
-                <ul class="list--nav--contents">
+                <label for="carInput">
+                    <select name="cars" id="cars">
+                        <option value="">Choice</option>
+                        <option value="Moto">Moto</option>
+                        <option value="Citadine">Citadine</option>
+                        <option value="Compact">Compact</option>
+                        <option value="Berline">Berline</option>
+                        <option value="Utilitaire">Utilitaire</option>
+                        <option value="Engin">Engin de chantier</option>
+                        <option value="Camion">Camion</option>
+                    </select>
+                </label>
 
-                    <div class="home">
-                        <li>
-                            <a href="index.html" class="home" title="home"> Home</a>
-                        </li>
+                <label for="carburantInput">
+                    <select name="cars" id="carb">
+                        <option value="">Choice</option>
 
-                    </div>
+                    </select>
+                </label>
 
-                    <div class="gallery">
-                        <li>
-                            <a href="gallery.html" class="gallery" title="gallery"> Gallery </a>
-                        </li>
-                    </div>
 
-                    <div class="reservation">
-                        <li>
-                            <a href="reservation.html" class="reservation" title="reservation"> Reservation </a>
-                        </li>
-                    </div>
+                <label for="transsmtioninput">
+                    <select name="cars" id="trans">
+                        <option value="">Choice</option>
 
-                    <div class="contact">
-                        <li>
-                            <a href="contact.html" class="contact" title="contact"> Contact </a>
-                        </li>
-                    </div>
+                    </select>
+                </label>
+                <input name="comment" id="days" placeholder="Nombre de jour"> <br />
 
-                </ul>
+                <button type="button" id="btn">Submit</button>
+                
+                <div class="resultat--container">
+                    <div style="width: 100px; height: 50px; text-align: center;" id="resultat"></div>
+                </div>
+
             </div>
         </div>
-    </header>
 
 
 
-    <body>
-        div.
-    </body>
+
+
+    </div>
+
+
+    <script src="../js/resrvation.js"></script>
+</body>
+
+
+
+
+</html>

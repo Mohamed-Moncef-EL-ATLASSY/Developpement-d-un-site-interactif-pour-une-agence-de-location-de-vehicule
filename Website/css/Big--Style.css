@@ -17,7 +17,7 @@
 body {
     position: relative;
     z-index: -2;
-    
+
 }
 
 header {
@@ -476,11 +476,6 @@ button {
 
     }
 
-
-
-
-
-
 }
 
 #popup {
@@ -523,32 +518,14 @@ button {
     font-weight: 900;
 }
 
+#resultat {
+    text-align: center;
+}
 
+.resultat--container {
+    min-width: 20px;
+    max-width: 80px;
+    width: auto;
+    height: 20px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
